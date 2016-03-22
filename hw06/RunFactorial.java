@@ -1,4 +1,4 @@
-//
+//This program asks the user for a number and finds the factorial of that number.
 
 import java.util.Scanner;
 
