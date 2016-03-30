@@ -16,7 +16,7 @@ public class Games {
         if (box1 == box2) { //if box1 and box2 are the same number then the prize is in box3
             box3 = 1 - box1; //sets box3 equal to either 0 or 1. Whatever the other two are not
         } else {
-            box3 = randomGenerator.nextInt(1; //makes box3 either 1 or 0 randomly. this determines whether box1 or box2 wins because if it gets to this else statement then box3 cannot win
+            box3 = randomGenerator.nextInt(1); //makes box3 either 1 or 0 randomly. this determines whether box1 or box2 wins because if it gets to this else statement then box3 cannot win
         }
         
         while (!acceptable) { //checks if the input is acceptable
