@@ -130,7 +130,7 @@ public class Sentence {
         
         switch (randomInt) {
             case 0:
-                verb = "jumped";
+                verb = "jumped over";
                 break;
             case 1:
                 verb = "ate";
@@ -142,19 +142,19 @@ public class Sentence {
                 verb = "was";
                 break;
             case 4:
-                verb = "ran";
+                verb = "ran to";
                 break;
             case 5:
                 verb = "heard";
                 break;
             case 6:
-                verb = "walked";
+                verb = "walked to";
                 break;
             case 7:
                 verb = "read";
                 break;
             case 8:
-                verb = "passed";
+                verb = "passed by";
                 break;
             case 9:
                 verb = "wrote";
@@ -170,26 +170,16 @@ public class Sentence {
         Scanner input = new Scanner(System.in);
         
         while (answer) {
-            for (int i=0; i<6; i++) {
-                if (i=0) {
-                    System.out.print("The ");
-                } else if (i=1) {
-                    System.out.print(adjective() + " ");
-                } else if (i=2) {
-                    System.out.print(noun1() + " ");
-                } else if (i=3) {
-                    System.out.print(verb() + " ");
-                } else if (i=4) {
-                    System.out.print("the ");
-                } else if (i=5) {
-                    System.out.print(noun2() + ".");
-                }
-            }
-            
+            System.out.print("The ");
+            System.out.print(adjective() + " ");
+            System.out.print(noun1() + " ");
+            System.out.print(verb() + " ");
+            System.out.print("the ");
+            System.out.print(noun2() + ".");
             System.out.print("\n");
             
             System.out.print("Type 'yes' for another sentence: ");
-            if (input.nextString().equals("yes")) {
+            if (input.next().equals("yes")) {
                 answer = true;
             } else {
                 answer = false;
