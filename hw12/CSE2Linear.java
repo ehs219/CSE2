@@ -19,6 +19,29 @@ public class CSE2Linear {
         }
     }
     
+    public static void binarySearch(int[] numbers, int search) {
+        int low = 0;
+        int high = 14;
+        int mid = 7;
+        int count = 1;
+        
+        while (numbers[high] >= numbers[low]) {
+            mid = (low + high) / 2;
+            if (numbers[mid] == search) {
+                System.out.println(search + " was found with " + count + " iterations");
+                break;
+            } else if (numbers[mid] < search) {
+                low = mid + 1;
+            } else if (numbers[mid] > search) {
+                high = mid - 1;
+            }
+            if (count == numbers.length) {
+                System.out.println(search + " was not found with " + count + " iterations");
+            }
+            count++;
+        }
+    }
+    
     public static void scramble(int[] numbers) { //method to scramble the numbers in an array
         int target = 0; //this will be the random place in the array to switch with
         int temp = 0; //variable to hold the place of numbers in the array while they are being scrambled
@@ -81,7 +104,7 @@ public class CSE2Linear {
             }
         }
         
-        linearSearch(grades, find); //calls the method linearSearch
+        binarySearch(grades, find); //calls the method linearSearch
         scramble(grades); //calls the method scramble
         
         System.out.println("Scrambled:");
